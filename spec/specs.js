@@ -43,5 +43,4 @@ describe('Order.cost', function() {
     var testOrder = new Order(1,[]);
     expect(testOrder.cost()).to.equal(0);
   });
-
 });
