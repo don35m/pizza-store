@@ -10,6 +10,6 @@ describe('Order', function() {
 describe('Order.cost', function() {
   it("charges $6 for a basic one topping pizza", function() {
     var testOrder = new Order(1,"small",["pepperoni"]);
-    expect(testOrder.cost()).to.equal(7);
+    expect(testOrder.cost()).to.equal(6);
   });
 });
