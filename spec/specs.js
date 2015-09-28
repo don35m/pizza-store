@@ -19,4 +19,9 @@ describe('Order.cost', function() {
     expect(testOrder.cost()).to.equal(8);
   });
 
+  it("charges $10 for a basic largre one topping pizza", function() {
+    var testOrder = new Order(1,"large",["pepperoni"]);
+    expect(testOrder.cost()).to.equal(10);
+  });
+
 });
