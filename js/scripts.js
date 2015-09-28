@@ -24,11 +24,11 @@ Order.prototype.cost = function() {
 }
 
 $(document).ready(function() {
-  $("#add-topping").click(function(event) {
+  $("#add-toppings").click(function(event) {
     event.preventDefault();
     $("#new-toppings").append(
-      '<div class="form-group new-topping">' +
-        '<select id="topping">' +
+      '<div class="form-group new-toppings">' +
+        '<select id="toppings">' +
           '<option value="cheese">Cheese</option' +
           '<option value="pepperoni">Pepperoni</option' +
           '<option value="sausage">Sausage</option' +
@@ -46,15 +46,15 @@ $(document).ready(function() {
     event.preventDefault();
 
     var quantity = parseInt($("input#quantity").val());
-    var pizzaSize = $("#size").val();
+    var pizzaSize = $("select#size").val();
     var topping = [];
 
-    $(".new-topping").each(function() {
-      topping.push($("select#topping").val());
+    $(".new-toppings").each(function() {
+      topping.push($("select#toppings").val());
     });
 
     var newOrder = new Order(quantity,pizzaSize,topping);
 
-    $("#order-total").text(newOrder.cost());
+    $("#order-price").text(newOrder.cost());
   });
 });
