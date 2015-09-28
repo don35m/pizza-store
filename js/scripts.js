@@ -11,10 +11,8 @@ Order.prototype.cost = function() {
     total = 6 * this.quantity;
   } else if (this.pizzaSize === "medium") {
     total = 8 * this.quantity;
-  } else if (this.pizzaSize === "large") {
-    total = 10 * this.quantity;
   } else {
-    alert("Please choose a size");
+    total = 10 * this.quantity;
   }
 
   if (this.topping !== undefined) {
@@ -48,7 +46,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var quantity = parseInt($("input#quantity").val());
-    var pizzaSize = $("select#size").val();
+    var pizzaSize = $("#size").val();
     var topping = [];
 
     $(".new-topping").each(function() {
