@@ -24,4 +24,9 @@ describe('Order.cost', function() {
     expect(testOrder.cost()).to.equal(10);
   });
 
+  it("charges corretly based on how many pizza's ordered", function() {
+    var testOrder = new Order(2,"large",["pepperoni"]);
+    expect(testOrder.cost()).to.equal(20);
+  });
+
 });
