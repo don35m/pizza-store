@@ -14,7 +14,13 @@ Order.prototype.cost = function() {
   } else if (this.pizzaSize === "large") {
     total = 10 * this.quantity;
   } else {
-    total = 0;
+    alert("Please choose a size");
+  }
+
+  if (this.topping !== undefined) {
+    this.topping.forEach(function(toppings) {
+      total += 1;
+    })
   }
   return total;
 }
