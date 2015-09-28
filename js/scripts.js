@@ -9,6 +9,8 @@ Order.prototype.cost = function() {
 
   if (this.pizzaSize === "small") {
     total = 6 * this.quantity;
+  } else if (this.pizzaSize === "medium") {
+    total = 8 * this.quantity;
   }
   return total;
 }
