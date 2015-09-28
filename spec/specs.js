@@ -34,4 +34,9 @@ describe('Order.cost', function() {
     expect(testOrder.cost()).to.equal(11);
   });
 
+  it("charges 3$ extra for additional topping", function() {
+    var testOrder = new Order(1,"large",["cheese","pepperoni","sausage"]);
+    expect(testOrder.cost()).to.equal(13);
+  });
+
 });
