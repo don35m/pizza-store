@@ -39,4 +39,9 @@ describe('Order.cost', function() {
     expect(testOrder.cost()).to.equal(13);
   });
 
+  it("alerts user if no size is picked", function() {
+    var testOrder = new Order(1,[]);
+    expect(testOrder.cost()).to.equal(0);
+  });
+
 });
