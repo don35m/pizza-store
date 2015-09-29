@@ -54,7 +54,7 @@ $(document).ready(function() {
     });
 
     var newOrder = new Order(quantity,pizzaSize,topping);
-
+    $("#results").show();
     $("#order-price").text(newOrder.cost());
   });
 });
