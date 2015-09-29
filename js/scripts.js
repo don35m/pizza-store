@@ -24,22 +24,22 @@ Order.prototype.cost = function() {
 }
 
 $(document).ready(function() {
-  $("#add-toppings").click(function(event) {
+  $("#add-topping").click(function(event) {
     event.preventDefault();
     $("#new-toppings").append(
-      '<div class="form-group new-toppings">' +
-        '<select id="toppings">' +
-          '<option value="cheese">Cheese</option' +
-          '<option value="pepperoni">Pepperoni</option' +
-          '<option value="sausage">Sausage</option' +
-          '<option value="canadion bacon">Canadion Bacon</option' +
-          '<option value="hamburger">Hamburger</option' +
-          '<option value="chicken">Chicken</option' +
-          '<option value="onion">Onion</option' +
-          '<option value="green peppers">Green Peppers</option' +
-          '<option value="pineapple">Pineapple</option' +
+      '<div class="form-group new-topping">' +
+        '<select id="topping">' +
+          '<option value="cheese">Cheese</option>' +
+          '<option value="pepperoni">Pepperoni</option>' +
+          '<option value="sausage">Sausage</option>' +
+          '<option value="canadion bacon">Canadion Bacon</option>' +
+          '<option value="hamburger">Hamburger</option>' +
+          '<option value="chicken">Chicken</option>' +
+          '<option value="onion">Onion</option>' +
+          '<option value="green peppers">Green Peppers</option>' +
+          '<option value="pineapple">Pineapple</option>' +
         '</select>' +
-      '</div>');
+      '</div>')
   });
 
   $("form#new-order").submit(function(event) {
@@ -49,7 +49,7 @@ $(document).ready(function() {
     var pizzaSize = $("select#size").val();
     var topping = [];
 
-    $(".new-toppings").each(function() {
+    $(".new-topping").each(function() {
       topping.push($("select#toppings").val());
     });
 
